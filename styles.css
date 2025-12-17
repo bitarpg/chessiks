@@ -1,0 +1,71 @@
+/* styles.css — визуальный слой интерфейса */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@400;700&display=swap');
+
+/* === ОБЩЕЕ === */
+
+body {
+    background: var(--background);
+    color: #e2e8f0;
+    font-family: 'Roboto Mono', monospace;
+    overflow: hidden;
+    user-select: none;
+}
+
+.title-font {
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* === ИГРОВАЯ ДОСКА === */
+
+.board-wrapper {
+    width: 100%;
+    max-width: 80vh;
+    aspect-ratio: 1;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    border: 8px solid #334155;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+    position: relative;
+    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+    /* переворот доски */
+    .board-wrapper.flipped {
+        transform: rotate(180deg);
+    }
+
+        .board-wrapper.flipped .cell {
+            transform: rotate(180deg);
+        }
+
+/* === КЛЕТКИ === */
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1rem, 5vmin, 4rem);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.8s;
+}
+
+    .cell.light {
+        background: var(--orange);
+        color: #cbd5e0;
+    }
+
+    .cell.dark {
+        background: var(--fiol);
+        color: #94a3b8;
+    }
+
+    .cell.selected {
+        background: rgba(251, 191, 36, 0.3) !important;
+        box-shadow: inset 0 0 10px var(--gold);
+    }
+
+    .cell.

@@ -1,0 +1,16 @@
+/* themes.css — переменные цветовых тем */
+
+:root {
+    --bg: #0f172a;
+    --dark: #1e293b;
+    --light: #475569;
+    --gold: #fbbf24;
+    --blue: #3b82f6;
+    --purp: #d946ef;
+    --red: #ef4444;
+
+    --orange: #a3d4e8; /* светлые клетки */
+    --fiol: #1c7094;   /* тёмные клетки */
+
+    --background: linear-gradient(180deg, #120038, #001526);
+}
